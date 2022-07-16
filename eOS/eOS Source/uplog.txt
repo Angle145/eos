@@ -1,0 +1,71 @@
+eOS V3.1.5更新日志(此版本支持长期维护)
+1.优化调度机制，所有接口API和用法不变，重大更新，请将旧版本及时更新到此版本。
+
+
+eOS V3.1.4更新日志(此版本支持长期维护)
+
+2022.06.15  Angle145
+1.系统级优化：V3.1.3中的系统核心任务默认是不运行的导致核心APP如APP重启、软件定时器虚拟中断函数等不能正常执行，
+		此版本修复了此bug。
+2.eos.h默认空闲APP超时时间为10S、核心APP超时时间为1S。
+
+
+
+eOS V3.1.3更新日志(此版本支持长期维护)
+
+2022.05.22  Angle145
+1.系统级优化：系统内核之前版本只有一个固定的空闲任务，优先级最低，此版本增加了一个系统核心任务，用于执行系统关键代码，优先级最高。
+2.修复了邮箱队列的BUG。
+3.增加了OS_APP_VALUE数值量。
+4.增加支持看门狗。
+
+
+
+
+
+
+eOS V3.1.0更新日志(此版本支持长期维护)
+
+2021.04.15  Angle145
+1.函数名变更
+//全局中断禁使能函数
+//旧：
+void API_os_core_enter(void);                          //关闭全局中断函数(在汇编中)            
+void API_os_core_exit(void);                           //打开全局中断函数(在汇编中) 
+//新：
+void API_os_irq_disable(void);                         //关闭全局中断函数(在汇编中)            
+void API_os_irq_enable(void);                          //打开全局中断函数(在汇编中) 
+//应用创建函数
+//旧：
+os_bool os_app_create(void* app,os_stk *topstkptr,os_u32 stk_len,os_u8 prio,os_u8 state);     //APP创建函数
+//新：
+os_bool os_app_create(os_u8 prio,char *name_ptr,fun app,os_u32 stk_size,os_u32 timeout,os_u8 state);//APP创建函数
+
+
+2新增和内部优化函数
+//和任务有关
+void os_app_suspend(fun app);//挂起APP(任何)
+void os_app_resume(fun app);//恢复APP(对其他APP,非自己)
+void os_app_prio_set(fun app,os_u8 new_prio); 	//设置APP的优先级为new_prio(对外)
+void os_app_restart(fun app);//重新启动APP(任何)
+void os_app_restart_other(fun app);//重新启动APP(对其他APP,非自己)
+
+//和软定时器有关
+void os_timer_count_interrupt_set(os_u8 id,fun function);//设置系统软件定时器计数中断函数(只能在里面作变量计数累加)
+void os_timer_interrupt_set(os_u8 id,fun function);//设置系统软件定时器中断函数(能在里面调用其他函数)
+
+3.优化修复函数
+os_bool os_mbox_queue_post(os_u8 id,os_u8 *send_mail,os_u32 *mail_len);//发送邮箱队列邮件
+os_bool os_mbox_queue_pend(os_u8 mod,os_u8 id,os_u8 *read_mail,os_u32 *mail_len);//等待邮箱队列邮件mod=0阻塞，=1非阻塞(返回OS_TRUE表示队列成功取出队头邮件)
+
+4.shell插件
+//增加串口字符串(数组输入接口函数，适用于串口空闲接收方式的数据传入)
+//增加用户登录权限系统
+
+5.取消使用新建数组作为应用栈，改为使用总内存池，但不支持用户动态内存(只用于应用栈分配内存)，其大小在eos.h设置。
+
+6.注意，Cortex-M0\M3\M4对应的eos_port1.asm文件不一样，使用时请替换成相应的文件，eOS文件夹内默认是Cortex-M3的。
+
+
+
+
