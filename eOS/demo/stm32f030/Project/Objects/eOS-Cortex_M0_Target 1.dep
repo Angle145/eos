@@ -1,0 +1,189 @@
+Dependencies for Project 'eOS-Cortex_M0', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (..\User\main.c)(0x5DE3D74E)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\eOS\eos.h)(0x62AB432D)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+F (..\CoreLib\stm32f0xx_it.c)(0x62AB42F0)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_it.o --omf_browse .\objects\stm32f0xx_it.crf --depend .\objects\stm32f0xx_it.d)
+I (..\CoreLib\stm32f0xx_it.h)(0x4F6BFDC2)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+F (..\Driver\led.c)(0x5C9F49E2)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (..\Driver\led.h)(0x5C9F49EA)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+F (..\Driver\led.h)(0x5C9F49EA)()
+F (..\Driver\usart.c)(0x62AB4351)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\usart.o --omf_browse .\objects\usart.crf --depend .\objects\usart.d)
+I (..\Driver\usart.h)(0x53CB37B2)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (..\eOS\plugin\eos_plugin_shell.h)(0x62AB426C)
+I (..\eOS\eos.h)(0x62AB432D)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+F (..\Driver\usart.h)(0x53CB37B2)()
+F (..\CoreLib\CORE\startup_stm32f0xx.s)(0x4F6BFDB8)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include--pd "__UVISION_VERSION SETA 537" --pd "STM32F030x6 SETA 1"--list .\listings\startup_stm32f0xx.lst --xref -o .\objects\startup_stm32f0xx.o --depend .\objects\startup_stm32f0xx.d)
+F (..\CoreLib\STM32F03x_FWLib\src\stm32f0xx_gpio.c)(0x4F6BFDB8)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_gpio.o --omf_browse .\objects\stm32f0xx_gpio.crf --depend .\objects\stm32f0xx_gpio.d)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+F (..\CoreLib\STM32F03x_FWLib\src\stm32f0xx_misc.c)(0x4F6BFDB8)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_misc.o --omf_browse .\objects\stm32f0xx_misc.crf --depend .\objects\stm32f0xx_misc.d)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+F (..\CoreLib\STM32F03x_FWLib\src\stm32f0xx_rcc.c)(0x4F6BFDB8)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_rcc.o --omf_browse .\objects\stm32f0xx_rcc.crf --depend .\objects\stm32f0xx_rcc.d)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+F (..\CoreLib\STM32F03x_FWLib\src\stm32f0xx_usart.c)(0x4F6BFDB8)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_usart.o --omf_browse .\objects\stm32f0xx_usart.crf --depend .\objects\stm32f0xx_usart.d)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+F (..\CoreLib\system_stm32f0xx.c)(0x4F6BFDB8)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\system_stm32f0xx.o --omf_browse .\objects\system_stm32f0xx.crf --depend .\objects\system_stm32f0xx.d)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+F (..\eOS\eos_main.c)(0x62AB41BC)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\eos_main.o --omf_browse .\objects\eos_main.crf --depend .\objects\eos_main.d)
+I (..\eOS\eos.h)(0x62AB432D)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+I (..\Driver\led.h)(0x5C9F49EA)
+I (..\Driver\usart.h)(0x53CB37B2)
+F (..\eOS\eos.c)(0x62A9BF00)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\eos.o --omf_browse .\objects\eos.crf --depend .\objects\eos.d)
+I (..\eOS\eos.h)(0x62AB432D)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+F (..\eOS\eos.h)(0x62AB432D)()
+F (..\eOS\eos_port1.asm)(0x60B4FC82)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include--pd "__UVISION_VERSION SETA 537" --pd "STM32F030x6 SETA 1"--list .\listings\eos_port1.lst --xref -o .\objects\eos_port1.o --depend .\objects\eos_port1.d)
+F (..\eOS\eos_port2.c)(0x62AB42BC)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\eos_port2.o --omf_browse .\objects\eos_port2.crf --depend .\objects\eos_port2.d)
+I (..\eOS\eos.h)(0x62AB432D)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+F (..\eOS\plugin\eos_plugin_shell.c)(0x62AB42DF)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\eOS -I ..\Driver -I ..\User -I ..\eOS\plugin -I ..\CoreLib\CORE -I ..\CoreLib\STM32F03x_FWLib\inc -I ..\CoreLib-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F030x6 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\eos_plugin_shell.o --omf_browse .\objects\eos_plugin_shell.crf --depend .\objects\eos_plugin_shell.d)
+I (..\eOS\plugin\eos_plugin_shell.h)(0x62AB426C)
+I (..\eOS\eos.h)(0x62AB432D)
+I (..\CoreLib\stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cm0.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CoreLib\CORE\core_cmInstr.h)(0x4F6BFDB8)
+I (..\CoreLib\CORE\core_cmFunc.h)(0x4F6BFDB8)
+I (..\CoreLib\system_stm32f0xx.h)(0x4F6BFDB8)
+I (..\CoreLib\stm32f0xx_conf.h)(0x536A18A2)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h)(0x4F6BFDB8)
+I (..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h)(0x4F6BFDB8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+F (..\eOS\plugin\eos_plugin_shell.h)(0x62AB426C)()

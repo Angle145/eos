@@ -1,0 +1,13 @@
+.\objects\system_stm32f0xx.o: ..\CoreLib\system_stm32f0xx.c
+.\objects\system_stm32f0xx.o: ..\CoreLib\stm32f0xx.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\CORE\core_cm0.h
+.\objects\system_stm32f0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\CORE\core_cmInstr.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\CORE\core_cmFunc.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\system_stm32f0xx.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\stm32f0xx_conf.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\stm32f0xx.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h
+.\objects\system_stm32f0xx.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h

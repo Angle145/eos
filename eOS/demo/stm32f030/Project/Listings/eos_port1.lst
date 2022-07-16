@@ -1,0 +1,230 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;eOS for Cortex-M0
+    2 00000000         
+    3 00000000         ;µÚÈý²¿·Ö
+    4 00000000                 import           os_acb_cur  ;ÏòÄÚº¯ÊýÉùÃ÷(Ö¸Ã÷¸
+                                                            Ãº¯ÊýÌåÔÚÍâ²¿)
+    5 00000000                 import           os_acb_rdy
+    6 00000000         
+    7 00000000                 export           API_os_irq_disable ;ÏòÍâº¯ÊýÉùÃ
+                                                            ÷(Ö¸Ã÷¸Ãº¯ÊýÌåÔÚ´Ë´
+                                                            ¦)
+    8 00000000                 export           API_os_irq_enable
+    9 00000000                 export           API_os_psp_reset
+   10 00000000                 export           PendSV_Handler
+   11 00000000         
+   12 00000000                 preserve8
+   13 00000000                 area             |.text|, code, readonly
+   14 00000000                 thumb
+   15 00000000         
+   16 00000000         API_os_irq_disable                   ;¹ØÈ«¾ÖÖÐ¶Ï
+   17 00000000 B672            cpsid            I
+   18 00000002 4770            bx               lr
+   19 00000004         
+   20 00000004         API_os_irq_enable                    ;¿ªÈ«¾ÖÖÐ¶Ï   
+   21 00000004 B662            cpsie            I
+   22 00000006 4770            bx               lr
+   23 00000008         
+   24 00000008         API_os_psp_reset                     ;¶ÑÕ»Ö¸ÕëÇå0  
+   25 00000008 B672            cpsid            I
+   26 0000000A 4C22            ldr              r4,=0x0
+   27 0000000C F384 8809       msr              psp, r4
+   28 00000010 B662            cpsie            I
+   29 00000012 4770            bx               lr
+   30 00000014         PendSV_Handler                       ;Èí¼þ´¥·¢ÖÐ¶Ïº¯Êý  
+                                                            
+   31 00000014 B672            cpsid            I
+   32 00000016 F3EF 8009       mrs              r0, psp
+   33 0000001A 2800            cmp              R0 , #0x00
+   34 0000001C D019            beq              os_reset_enter
+   35 0000001E         
+   36 0000001E 3810            subs             R0 , R0 , #0x10
+   37 00000020 6004            str              R4 , [R0]   ;save r4-r7 to (sp-
+                                                            0x10) -> sp       
+   38 00000022 1D00            adds             R0 , R0 , #0x4
+   39 00000024 6005            str              R5 , [R0]
+   40 00000026 1D00            adds             R0 , R0,  #0x4
+   41 00000028 6006            str              R6 , [R0]
+   42 0000002A 1D00            adds             R0 , R0 , #0x4
+   43 0000002C 6007            str              R7 , [R0]
+   44 0000002E 1D00            adds             R0 , R0 , #0x4
+   45 00000030         ;M0 is disable to operate R8-R15 ,so move R8-R15 to r0-r
+                       7 to operate
+   46 00000030 3820            subs             R0 , R0 , #0x20 ;save r8-r11 to
+                                                             (sp-0x20) -> (sp-0
+                                                            x10) 
+   47 00000032 4644            mov              R4 , R8
+   48 00000034 6004            str              R4 , [R0]
+   49 00000036 1D00            adds             R0 , R0 , #0x4
+   50 00000038 464D            mov              R5 , R9
+   51 0000003A 6005            str              R5 , [R0]
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   52 0000003C 1D00            adds             R0 , R0 , #0x4
+   53 0000003E 4656            mov              R6 , R10
+   54 00000040 6006            str              R6 , [R0]
+   55 00000042 1D00            adds             R0 , R0 , #0x4
+   56 00000044 465F            mov              R7 , R11
+   57 00000046 6007            str              R7 , [R0]
+   58 00000048 1D00            adds             R0 , R0 , #0x4
+   59 0000004A         
+   60 0000004A 3810            subs             R0 , R0 , #0x10 ;r0 = r0 -0x20 
+                                                            , (r0 save sp value
+                                                            )
+   61 0000004C         
+   62 0000004C 4912            ldr              r1, =os_acb_cur
+   63 0000004E 6809            ldr              r1, [r1]
+   64 00000050 6008            str              r0, [r1]
+   65 00000052         os_reset_enter
+   66 00000052 4811            ldr              r0, =os_acb_cur
+   67 00000054 4911            ldr              r1, =os_acb_rdy
+   68 00000056 680A            ldr              r2 , [r1]
+   69 00000058 6002            str              r2 , [r0]
+   70 0000005A 6810            ldr              r0 , [r2]   ;r0 = (sp-0x20)   
+   71 0000005C         
+   72 0000005C         ;M0 is disable to operate R8-R15 ,so move R8-R15 to r0-r
+                       7 to operate
+   73 0000005C 6804            ldr              R4 , [R0]
+   74 0000005E 1D00            adds             R0 , R0 , #0x4
+   75 00000060 46A0            mov              R8 , R4     ;recover r8-r11 for
+                                                            m (sp-0x20) -> (sp-
+                                                            0x10)  
+   76 00000062 6805            ldr              R5 , [R0]
+   77 00000064 1D00            adds             R0 , R0 , #0x4
+   78 00000066 46A9            mov              R9 , R5
+   79 00000068 6806            ldr              R6 , [R0]
+   80 0000006A 1D00            adds             R0 , R0 , #0x4
+   81 0000006C 46B2            mov              R10, R6
+   82 0000006E 6807            ldr              R7 , [R0]
+   83 00000070 1D00            adds             R0 , R0 , #0x4
+   84 00000072 46BB            mov              R11, R7
+   85 00000074         
+   86 00000074 6804            ldr              R4 , [R0]   ;recover r4-r7 form
+                                                             (sp-0x20) -> (sp-0
+                                                            x10)          
+   87 00000076 1D00            adds             R0 , R0 , #0x4
+   88 00000078 6805            ldr              R5 , [R0]
+   89 0000007A 1D00            adds             R0 , R0 , #0x4
+   90 0000007C 6806            ldr              R6 , [R0]
+   91 0000007E 1D00            adds             R0 , R0 , #0x4
+   92 00000080 6807            ldr              R7 , [R0]
+   93 00000082         
+   94 00000082 1D00            adds             R0 , R0 , #0x4 ;r0 = sp , (r0 s
+                                                            ave sp value)
+   95 00000084         
+   96 00000084 F380 8809       msr              PSP, R0
+   97 00000088 2104            movs             R1 , #0x04
+   98 0000008A 4672            mov              R2 , LR
+   99 0000008C 430A            orrs             R2 , R2 , R1
+  100 0000008E 4696            mov              LR , R2
+  101 00000090         
+  102 00000090 B662            cpsie            I
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+  103 00000092 4770            bx               lr
+  104 00000094         
+  105 00000094                 align            4
+  106 00000094                 end
+              00000000 
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
+ork --depend=.\objects\eos_port1.d -o.\objects\eos_port1.o -IC:\Users\86151\App
+Data\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx
+\Include -IC:\Users\86151\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Devi
+ce\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 
+537" --predefine="STM32F030x6 SETA 1" --list=.\listings\eos_port1.lst ..\eOS\eo
+s_port1.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 13 in file ..\eOS\eos_port1.asm
+   Uses
+      None
+Comment: .text unused
+API_os_irq_disable 00000000
+
+Symbol: API_os_irq_disable
+   Definitions
+      At line 16 in file ..\eOS\eos_port1.asm
+   Uses
+      At line 7 in file ..\eOS\eos_port1.asm
+Comment: API_os_irq_disable used once
+API_os_irq_enable 00000004
+
+Symbol: API_os_irq_enable
+   Definitions
+      At line 20 in file ..\eOS\eos_port1.asm
+   Uses
+      At line 8 in file ..\eOS\eos_port1.asm
+Comment: API_os_irq_enable used once
+API_os_psp_reset 00000008
+
+Symbol: API_os_psp_reset
+   Definitions
+      At line 24 in file ..\eOS\eos_port1.asm
+   Uses
+      At line 9 in file ..\eOS\eos_port1.asm
+Comment: API_os_psp_reset used once
+PendSV_Handler 00000014
+
+Symbol: PendSV_Handler
+   Definitions
+      At line 30 in file ..\eOS\eos_port1.asm
+   Uses
+      At line 10 in file ..\eOS\eos_port1.asm
+Comment: PendSV_Handler used once
+os_reset_enter 00000052
+
+Symbol: os_reset_enter
+   Definitions
+      At line 65 in file ..\eOS\eos_port1.asm
+   Uses
+      At line 34 in file ..\eOS\eos_port1.asm
+Comment: os_reset_enter used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+os_acb_cur 00000000
+
+Symbol: os_acb_cur
+   Definitions
+      At line 4 in file ..\eOS\eos_port1.asm
+   Uses
+      At line 62 in file ..\eOS\eos_port1.asm
+      At line 66 in file ..\eOS\eos_port1.asm
+
+os_acb_rdy 00000000
+
+Symbol: os_acb_rdy
+   Definitions
+      At line 5 in file ..\eOS\eos_port1.asm
+   Uses
+      At line 67 in file ..\eOS\eos_port1.asm
+Comment: os_acb_rdy used once
+2 symbols
+343 symbols in table

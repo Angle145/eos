@@ -1,0 +1,2 @@
+source code文件夹中已将汇编文件整合到cpu文件夹中，demo中的汇编文件名为eos_port1.asm,
+用户使用source code移植时，在工程中可直接添加cpu文件夹中对应的文件无需改名，汇编文件名称xxx.asm变化不影响功能实现。

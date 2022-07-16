@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\stm32f0xx_it.o"
+".\objects\led.o"
+".\objects\usart.o"
+".\objects\startup_stm32f0xx.o"
+".\objects\stm32f0xx_gpio.o"
+".\objects\stm32f0xx_misc.o"
+".\objects\stm32f0xx_rcc.o"
+".\objects\stm32f0xx_usart.o"
+".\objects\system_stm32f0xx.o"
+".\objects\eos_main.o"
+".\objects\eos.o"
+".\objects\eos_port1.o"
+".\objects\eos_port2.o"
+".\objects\eos_plugin_shell.o"
+--library_type=microlib --strict --scatter ".\Objects\eOS.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\eOS.map" -o .\Objects\eOS.axf

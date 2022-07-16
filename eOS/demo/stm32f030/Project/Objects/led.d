@@ -1,0 +1,14 @@
+.\objects\led.o: ..\Driver\led.c
+.\objects\led.o: ..\Driver\led.h
+.\objects\led.o: ..\CoreLib\stm32f0xx.h
+.\objects\led.o: ..\CoreLib\CORE\core_cm0.h
+.\objects\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\led.o: ..\CoreLib\CORE\core_cmInstr.h
+.\objects\led.o: ..\CoreLib\CORE\core_cmFunc.h
+.\objects\led.o: ..\CoreLib\system_stm32f0xx.h
+.\objects\led.o: ..\CoreLib\stm32f0xx_conf.h
+.\objects\led.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h
+.\objects\led.o: ..\CoreLib\stm32f0xx.h
+.\objects\led.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h
+.\objects\led.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h
+.\objects\led.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h

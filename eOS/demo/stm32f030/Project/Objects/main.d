@@ -1,0 +1,16 @@
+.\objects\main.o: ..\User\main.c
+.\objects\main.o: ..\eOS\eos.h
+.\objects\main.o: ..\CoreLib\stm32f0xx.h
+.\objects\main.o: ..\CoreLib\CORE\core_cm0.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: ..\CoreLib\CORE\core_cmInstr.h
+.\objects\main.o: ..\CoreLib\CORE\core_cmFunc.h
+.\objects\main.o: ..\CoreLib\system_stm32f0xx.h
+.\objects\main.o: ..\CoreLib\stm32f0xx_conf.h
+.\objects\main.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_gpio.h
+.\objects\main.o: ..\CoreLib\stm32f0xx.h
+.\objects\main.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_rcc.h
+.\objects\main.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_usart.h
+.\objects\main.o: ..\CoreLib\STM32F03x_FWLib\inc\stm32f0xx_misc.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
